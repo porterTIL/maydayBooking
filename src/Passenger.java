@@ -2,13 +2,25 @@ public class Passenger {
     int age;
     String passengerName;
     boolean tsaPreCheck;
-
-    public Passenger() {}
+    String[] tickets;
 
     public Passenger(int age, String passengerName, boolean tsaPreCheck) {
         setAge(age);
         setPassengerName(passengerName);
         setTsaPreCheck(tsaPreCheck);
+    }
+
+    public void buyTicket() {
+        System.out.println("Thank you for buying from " + Flight.Airline);
+        System.out.println("Your gate is " + Flight.gateNumber + " and departs at " + Flight.dateTimeDeparture);
+        System.out.println("Your seat number is " + Flight.seatNumber);
+        System.out.println("");
+
+    }
+
+    private void cancelReservation(int ticketNum) {
+        ticketNum = null;
+
     }
 
     //Getters and Setters
@@ -44,4 +56,5 @@ public class Passenger {
                 ", tsaPreCheck=" + tsaPreCheck +
                 '}';
     }
+
 }
